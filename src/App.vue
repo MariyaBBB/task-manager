@@ -1,17 +1,18 @@
 <template>
   <div id="app">
     <h1> Task Manager </h1>
-    <my-component> </my-component>
+    <router-link to="/">Главная</router-link>
+    <router-link to="/list">Список</router-link>
+    <RouterView/>
   </div>
 </template>
 
 <script>
-import MyComponent from './components/MyComponent'
 
 export default {
   name: 'App',
   components: {
-   MyComponent
+
   }
 }
 </script>
