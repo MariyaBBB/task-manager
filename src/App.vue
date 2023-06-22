@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <h1> Task Manager </h1>
-    <router-link to="/">Главная</router-link>
-    <router-link to="/list">Список</router-link>
+    <MyHeader />
+   
     <RouterView/>
   </div>
 </template>
 
 <script>
+import MyHeader from './components/MyHeader.vue'
 
 export default {
   name: 'App',
   components: {
+    MyHeader
 
   }
 }
@@ -20,6 +21,10 @@ export default {
 <style >
 h1 {
   text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 </style>
 
