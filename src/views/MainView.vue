@@ -31,14 +31,13 @@ export default ({
 
 <style>
 #main {
-    background: #f0f0f0;
     height: 100vh;
-    margin: 0;
+    margin: auto;
+    width: 760px;
+    text-align:justify;
 }
 
 p{
-    padding-left: 70px;
-    padding-right: 70px;
     padding-top: 20px;
     font-size: 20px;
 }

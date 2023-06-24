@@ -10,7 +10,7 @@
 import MyMenu from './MyMenu.vue'
 export default ({
     name: "MyHeader",
-    components: {MyMenu},
+    components: { MyMenu },
     data() {
         return {
             
@@ -27,6 +27,9 @@ export default ({
 
 <style >
  #header {
-    height: 62px;
+    height: 105px;
+    background: white;
+    margin-top: -20px;
+    padding-top: 20px;
  }
 </style>
