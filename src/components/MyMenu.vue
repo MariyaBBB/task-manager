@@ -2,10 +2,12 @@
     <div id="menu">
        <ul> 
             <li 
-                v-for="(menu, index) in menuData"
-                :key="index"
-                @click="$router.push({name: menu})">
-                 {{ menu }} 
+                @click="$router.push({name: 'Main'})">
+                 Главная
+            </li>
+            <li 
+                @click="$router.push({name: 'List'})">
+                 Список
             </li>
        </ul>
         
@@ -14,13 +16,12 @@
 
 <script>
 
-
+console.log(window.location.pathname);
 export default ({
     name: "MyMenu",
 
     data() {
         return {
-            menuData: ['Main', 'List']
         }
     },
 
@@ -45,6 +46,6 @@ export default ({
     ul li {
         cursor: pointer;
         list-style-type: none;
-        border-bottom: 1px solid gray;
+        border-bottom: 3px solid #d7d5d5;
     }
 </style>
