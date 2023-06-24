@@ -1,15 +1,15 @@
 <template>
-    <div id="root">
+    <div id="list">
+       <ManagerDesk />
        
-        ijhkhkk
     </div>
 </template>
 
 <script>
-
+import ManagerDesk from "@/components/ManagerDesk.vue"
 export default ({
     name: "ListView",
-
+    components: { ManagerDesk },
     data() {
         return {
             
@@ -23,3 +23,11 @@ export default ({
 
 })
 </script>
+
+<style>
+#list {
+    
+    height: 100vh;
+  
+}
+</style>
