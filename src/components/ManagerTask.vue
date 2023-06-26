@@ -2,7 +2,7 @@
     <div id="task" >
         <div 
             class="container"
-            v-for="task in tasks" 
+            v-for="task in allTasks" 
             :key="task.id"
             @click="task.isCompleted = !task.isCompleted "
            >
@@ -22,16 +22,18 @@
 </template>
 
 <script>
-
-import tasks from '../data/tasks'
+import { mapGetters } from "vuex";
 
 export default ({
     name: "ManagerTask",
+    computed: mapGetters(['allTasks']),
+
     data() {
         return {
-           tasks
+           
         }
     },
+
 
 })
 
@@ -42,7 +44,7 @@ export default ({
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: stretch;
-   justify-content: stretch;
+    justify-content: stretch;
     gap: 30px;
     height: 100%;
 }

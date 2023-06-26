@@ -1,6 +1,6 @@
 <template>
     <div id="desk">
-        <button @click="addTask"> + </button>
+        <button @click="addTask(taskName)"> + </button>
         <input type="text" placeholder="Название задачи" v-model="taskName" class="text">
       <ManagerTask />
     </div>
@@ -8,6 +8,7 @@
 
 <script>
 import tasks from "@/data/tasks";
+import { mapActions } from "vuex";
 import ManagerTask from "./ManagerTask.vue";
 
 export default ({
@@ -22,17 +23,7 @@ export default ({
         }
     },
 
-    methods: {
-        addTask: function() {
-            tasks.push({
-                    name: this.taskName,
-                    _id: Math.random().toString(36).substring(2, 7),
-                    isCompleted: false,
-                    })
-            this.taskName = '';
-        }
-    }
-
+    methods: mapActions(['addTask'])
 
 })
 </script>
