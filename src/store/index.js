@@ -15,7 +15,7 @@ export default new Vuex.Store({
         }
     },
     mutations: {
-        updateTask: function(state, task) {
+        updateTask(state, task) {
             state.tasks.push(task);
         }
     },
