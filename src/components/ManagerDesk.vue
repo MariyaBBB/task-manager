@@ -1,13 +1,12 @@
 <template>
     <div id="desk">
-        <button @click="addTask(taskName)"> + </button>
+        <button @click="() => {addTask(taskName); taskName = ''}"> + </button>
         <input type="text" placeholder="Название задачи" v-model="taskName" class="text">
       <ManagerTask />
     </div>
 </template>
 
 <script>
-import tasks from "@/data/tasks";
 import { mapActions } from "vuex";
 import ManagerTask from "./ManagerTask.vue";
 
@@ -17,9 +16,7 @@ export default ({
     components: { ManagerTask},
     data() {
         return {
-            taskName: '',
-            tasks
-        
+            taskName: '',        
         }
     },
 
